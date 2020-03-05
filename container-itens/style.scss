@@ -1,0 +1,96 @@
+.container {
+  background-color: rgb(206, 177, 235);
+  height: 921px;
+  width: 100%;
+  display: grid;
+
+  /*PROPRIEDADES DE CONTAINER*/
+
+  /*
+    Propriedade utlizada para definir a qtd e as dimensões das rows da grid.
+    
+    vh - view height (visão da altura). 
+    20vh - Da altura vista, separe vinte pedaços.
+    
+    Abaixo, foi definido 20vh para a primeira linha, 70 para a segunda e 10 para a terceira.
+  */
+  grid-template-rows: 20vh 60vh 18vh;
+  
+  /*
+    Propriedade utlizada para definir a qtd e as dimensões das columns da grid.
+
+    fr = Unidade usada para colunas flexiveis (1fr == 1 fração, 2fr == 2 frações)
+
+    No exemplo abaixo foram definidas duas colunas. A primeira ocupa 3 frações da tela
+    e a segunda 1 fração.
+  */
+  grid-template-columns: 1frkk ;
+
+  /*
+    Espaçamento entre colunas e linhas.
+
+    Pode ser abreviado em: 
+    grid-gap: 5px(row) 5px(column)
+  */
+  grid-row-gap: 3px;
+  grid-column-gap: 3px;
+
+    /*
+      Essa propriedade permite a criação de areas nomeadas em posições fixas na grid.
+      Para colocar um elemento dentro de um area criada, usamos a propriedade
+      grid-area nesse elemento, passando como valor o nome da area desejada.
+    */
+    grid-template-areas: "area1 area1"
+                         "area2 area3"
+                         "area4 area4";
+
+  header {
+    background-color: orangered;
+    grid-area: area1;
+  }
+  main {
+    background-color: blue;
+    grid-area: area3;
+  }
+  aside {
+    background-color: green;
+    grid-area: area2;
+  }
+  footer {
+    background-color: yellow;
+    grid-area: area4;
+  }
+  .item {
+
+    /*PROPRIEDADES DE ITENS*/
+
+    /*
+      -> grid-column / grid-row
+
+      O grid-column é usado para determinar a extensão de uma coluna levando
+      em consideração o número de colunas existentes no grid.
+
+      -start: A coluna onde se inicia a extensão. Começa-se a contar por 1.
+      -end: A coluna onde a extensão termina. 
+          Para a extensão ir até ao final da linha, o seu -end deve
+          ser igual a qtd de colunas +1, ou seja, em caso de 2 colunas, o end deverá
+          ser igual a 3.
+
+      
+
+      -> A mesma lógica se aplica para a propriedade grid-row-start/end
+
+    */
+
+    //Abrev: grid-column: 1/3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    //Abrev: grid-row: 3/4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+
+
+  }
+}

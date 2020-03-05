@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.container {
+  background-color: white;
+  height: 98vh;
+  width: 99vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container div.item {
+  background-color: green;
+  height: 40%;
+  width: 40%;
+}
+
+.container div.self {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+/* *--- Alinhamentos ---* */
+/*
+
+>> justify e align
+As proriedades "justify" alinham na horizontal (eixo x) enquanto 
+as "align" no eixo vertical(eixo y).container
+
+Existem 6 propriedades para alinhamento
+
+ > justify-content
+ > justify-items
+ > justify-self
+
+ > align-content
+ > align-items
+ > align-self
+
+
+*/
+/*
+
+ * --- Alinhamentos - Contents --- *
+
+  >>> justify-content e align-content
+    Alinham o próprio grid relativo ao espaço fora do grid.
+    São raramentes usadas pois seu uso só se faz necessário caso o grid
+    seja menor que a área definida.
+
+*/
+/*
+
+ * --- Alinhamentos - Items --- *
+
+  >>> justify-items e align-items
+    Permitem quem os itens do grid sejam alinhados em qualquer espaço disponível 
+    na célula que ele estiver.
+
+*/
+/*
+
+ * --- Alinhamentos - Self --- *
+
+  >>> justify-self e align-self
+    Faz exatamente a mesma coisa que justify/align-items, porém ao contrários destes, 
+    é aplicado nos itens do grid e não no contâiner.
+
+*/
+/*# sourceMappingURL=style.css.map */
